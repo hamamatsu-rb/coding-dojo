@@ -6,7 +6,6 @@ require 'weather'
 
 describe Weather do
   subject { Weather.new(sample) }
-  let(:data) { File.read(File.join(File.dirname(__FILE__), '..', 'data', 'weather.dat')) }
   let(:sample) { [2, 35, -1] }
 
   it { should be_kind_of(Weather) }
