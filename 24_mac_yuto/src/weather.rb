@@ -15,4 +15,18 @@ class Weather
       self.send(:"#{attr}=", values[i])
     end
   end
+
+  def self.min_temperature_day
+    maxday = 0
+    diff = 0
+    all do |weather|
+      curdiff = weather.max.to_i - weather.min.to_i
+      if diff < curdiff
+        maxday = weather.day
+        diff = curdiff
+      end
+    end 
+    return maxday.to_i
+  end
 end
+

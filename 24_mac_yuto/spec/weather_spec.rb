@@ -13,11 +13,12 @@ describe Weather do
 
   it { should be_respond_to(:day) }
   it { should be_respond_to(:min) }
-  it { should be_respond_to(:max)}
+  it { should be_respond_to(:max) }
 
   its(:day) { should == 2 }
   its(:max) { should == 35 }
   its(:min) { should == -1 }
+
 
   it "データファイルの中身が存在すること" do
     data.should_not be_nil
@@ -32,6 +33,18 @@ describe Weather do
     arr.length.should > 0
   end
 
-  it "全てのデータを読み込んで、最高・最低の気温の差が一番小さい日を見つけられること" do
+  it "メソッドが存在すること" do
+    Weather.min_temperature_day.should_not be_nil
   end
+
+  it "戻り値が１〜３１の数値であること" do
+    Weather.min_temperature_day.class.should eq Fixnum
+    Weather.min_temperature_day.should > 0
+    Weather.min_temperature_day.should <= 31
+  end
+
+  it "全てのデータを読み込んで、最高・最低の気温の差が一番小さい日を見つけられること" do
+    Weather.min_temperature_day.should be 9
+  end
+
 end
