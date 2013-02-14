@@ -16,14 +16,17 @@ class Weather
     end
   end
 
-  def self.min_temperature_day
+  def temperature_diff
+    return max.to_i - min.to_i
+  end
+
+  def self.smallest_difference_day
     maxday = 0
     diff = 0
     all do |weather|
-      curdiff = weather.max.to_i - weather.min.to_i
-      if diff < curdiff
+      if diff < weather.temperature_diff
         maxday = weather.day
-        diff = curdiff
+        diff = weather.temperature_diff
       end
     end 
     return maxday.to_i

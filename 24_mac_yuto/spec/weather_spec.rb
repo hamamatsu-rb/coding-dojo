@@ -5,7 +5,7 @@ require File.join(File.dirname(__FILE__), '..', 'src', 'weather')
 
 describe Weather do
 
-  subject { Weather.new(sample) }
+  subject {Weather.new(sample) }
   let(:data) { File.read(File.join(File.dirname(__FILE__), '..', 'data', 'weather.dat')) }
   let(:sample) { [2, 35, -1] }
 
@@ -18,6 +18,7 @@ describe Weather do
   its(:day) { should == 2 }
   its(:max) { should == 35 }
   its(:min) { should == -1 }
+  its(:temperature_diff) { should == 36}
 
 
   it "データファイルの中身が存在すること" do
@@ -33,18 +34,14 @@ describe Weather do
     arr.length.should > 0
   end
 
-  it "メソッドが存在すること" do
-    Weather.min_temperature_day.should_not be_nil
-  end
-
   it "戻り値が１〜３１の数値であること" do
-    Weather.min_temperature_day.class.should eq Fixnum
-    Weather.min_temperature_day.should > 0
-    Weather.min_temperature_day.should <= 31
+    Weather.smallest_difference_day.class.should eq Fixnum
+    Weather.smallest_difference_day.should > 0
+    Weather.smallest_difference_day.should <= 31
   end
 
   it "全てのデータを読み込んで、最高・最低の気温の差が一番小さい日を見つけられること" do
-    Weather.min_temperature_day.should be 9
+    Weather.smallest_difference_day.should be 9
   end
 
 end
