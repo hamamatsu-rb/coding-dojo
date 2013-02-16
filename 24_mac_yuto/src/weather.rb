@@ -19,7 +19,7 @@ class Weather
     end
   end
 
-  def self.smallest_difference_day
+  def self.min_diff_weather
     maxday = 0
     diff = 0
     all do |weather|

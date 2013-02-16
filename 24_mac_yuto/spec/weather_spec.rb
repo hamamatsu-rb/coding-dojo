@@ -38,14 +38,14 @@ describe Weather do
   end
 
   it "戻り値が１〜３１の数値であること" do
-    Weather.smallest_difference_day.class.should eq Fixnum
-    Weather.smallest_difference_day.should > 0
-    Weather.smallest_difference_day.should <= 31
+    Weather.min_diff_weather.class.should eq Fixnum
+    Weather.min_diff_weather.should > 0
+    Weather.min_diff_weather.should <= 31
   end
 
   describe ".min_diff_weather" do
     it "全てのデータを読み込んで、最高・最低の気温の差が一番小さい日を見つけられること" do
-      Weather.smallest_difference_day.should be 9
+      Weather.min_diff_weather.should be 9
     end    
   end
 
