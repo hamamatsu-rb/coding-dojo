@@ -12,12 +12,14 @@ describe Weather do
 
   it { should be_respond_to(:day) }
   it { should be_respond_to(:min) }
-  it { should be_respond_to(:max) }
+  it { should be_respond_to(:max)}
+  it { should be_respond_to(:diff) }
 
   its(:day) { should == 2 }
   its(:max) { should == 35 }
   its(:min) { should == -1 }
   its(:diff) { should == 36}
+
 
 
   describe ".load" do
@@ -36,6 +38,7 @@ describe Weather do
       }.should change(arr, :length)
     end
   end
+
 
   it "戻り値が１〜３１の数値であること" do
     Weather.min_diff_weather.class.should eq Fixnum

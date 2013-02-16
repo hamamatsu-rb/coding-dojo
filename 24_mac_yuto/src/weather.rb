@@ -36,3 +36,4 @@ class Weather
   end
 
 end
+
