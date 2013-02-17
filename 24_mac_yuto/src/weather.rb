@@ -19,7 +19,21 @@ class Weather
     end
   end
 
-  def diff
-    (self.max - self.min).abs
+  def self.min_diff_weather
+    maxday = 0
+    diff = 0
+    all do |weather|
+      if diff < weather.diff
+        maxday = weather.day
+        diff = weather.diff
+      end
+    end 
+    return maxday.to_i
   end
+
+  def diff
+    (self.max.to_i - self.min.to_i).abs
+  end
+
 end
+
