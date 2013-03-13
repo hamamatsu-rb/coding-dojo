@@ -6,4 +6,14 @@ class LTSV
       sum
     end
   end
+  def self.readfile(file)
+    a = []
+    File.open(file, "r") do |file|
+      while line = file.gets
+        line.chomp!
+        a << readline(line)
+      end
+    end
+    a
+  end
 end
