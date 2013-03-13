@@ -8,8 +8,7 @@ class LTSV
       next if i == 0
       lines << line_to_hash(line)
     end
-    p lines.to_s
-    lines
+    print(lines)
   end
 
   def line_to_hash(line)
@@ -22,6 +21,17 @@ class LTSV
     end
     hash
   end
+
+  def print(lines)
+    lines.each do |line|
+      array = []
+      line.each do |key,value|
+        array << "#{key}:#{value}"
+      end
+      puts array.join("\t")
+    end
+  end
+  
 end
 
 LTSV.new.load
