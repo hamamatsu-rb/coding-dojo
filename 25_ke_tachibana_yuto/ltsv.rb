@@ -11,9 +11,9 @@ class Ltsv
       array = hash.map do |k, v|
         k + ":" + v
       end
-      ret << array.join("\t")
+      ret << array.join("\t") + "\n"
     end
 
-    ret.join("\n")
+    ret.join
   end
 end

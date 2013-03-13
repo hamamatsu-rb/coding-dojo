@@ -11,11 +11,14 @@ describe Ltsv do
   end
 
   it "読み込んだハッシュ配列をLTSVにすることができる" do
-    Ltsv.write([{'name' => 'suchi', 'comment' => 'ATNDer'}]).should == "name:suchi\tcomment:ATNDer"
+    Ltsv.write([{'name' => 'suchi', 'comment' => 'ATNDer'}]).should == "name:suchi\tcomment:ATNDer\n"
   end
 
   it "複数行出力できる" do
-    Ltsv.write([{'name' => 'suchi'}, {'name' => 'ke_tachibana'}]).should == "name:suchi\nname:ke_tachibana"
+    Ltsv.write([{'name' => 'suchi'}, {'name' => 'ke_tachibana'}]).should == <<-EOS
+name:suchi
+name:ke_tachibana
+    EOS
   end
 
 end
