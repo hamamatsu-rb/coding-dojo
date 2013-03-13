@@ -24,11 +24,7 @@ class LTSV
 
   def print(lines)
     lines.each do |line|
-      array = []
-      line.each do |key,value|
-        array << "#{key}:#{value}"
-      end
-      puts array.join("\t")
+      puts line.map {|k,v| "#{k}:#{v}"} . join ("\t")
     end
   end
   
