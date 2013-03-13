@@ -6,7 +6,7 @@ class Ltsv
   end
 
   def self.write(hash_array)
-    ret = ""
+    ret = []
     hash_array.each do |hash|
       array = hash.map do |k, v|
         k + ":" + v
@@ -14,6 +14,6 @@ class Ltsv
       ret << array.join("\t")
     end
 
-    ret 
+    ret.join("\n")
   end
 end
