@@ -7,6 +7,5 @@ require 'ltsv'
 describe LTSV do
   let(:ltsv) { LTSV.new }
   it { ltsv.load.should be_true }
-
 end
 
