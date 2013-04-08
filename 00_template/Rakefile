@@ -1,20 +1,20 @@
 # encoding:utf-8
 namespace :dojo do
-  
-  desc "install gems" 
-  task "install" do
+
+  desc "install gems to ./vendor/bundle" 
+  task :install do
     sh "bundle install --path ./vendor/bundle"
   end
 
-  desc "execute RSpec"
-  task "spec" do
+  desc "execute 'rspec' command files in spec/*_spec.rb"
+  task :spec do
     Dir::foreach("spec") do |file|
       sh "bundle exec rspec spec/#{file}" if file =~ /_spec.rb/
     end
   end
 
-  desc "execute Ruby"
-  task "ruby" do
+  desc "execute 'ruby' command files in src/.rb"
+  task :ruby do  
     Dir::foreach("src") do |file|
       sh "bundle exec ruby src/#{file}" if file =~ /.rb/
     end
