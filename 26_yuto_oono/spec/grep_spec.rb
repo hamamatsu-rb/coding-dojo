@@ -15,6 +15,11 @@ describe Grep do
     it { subject.grep("input aaaaa").should == nil }
   end
 
+  context 'フォーマット付きで' do
+    subject { Grep.new("\s(text)\s", '#{$1}.rb') }
+    it { subject.grep("input text ").should == "text.rb" }
+    it { subject.grep("input aaaaa").should == nil }
+  end
   
 end
 
