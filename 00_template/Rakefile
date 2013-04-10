@@ -13,7 +13,7 @@ namespace :dojo do
     end
   end
 
-  desc "execute 'ruby' command files in src/.rb"
+  desc "execute 'ruby' command files in src/*.rb"
   task :ruby do  
     Dir::foreach("src") do |file|
       sh "bundle exec ruby src/#{file}" if file =~ /.rb/
