@@ -30,6 +30,7 @@ describe Grep do
 
     context 'pattern /4(567)89/, str "1234567890", format: "#{$1}-000"' do
       let(:pattern) { /4(567)89/ }
+      let(:format) { '#{$1}-000' }
       it { should == "567-000" }
     end
   end
