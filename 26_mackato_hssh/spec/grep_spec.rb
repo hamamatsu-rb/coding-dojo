@@ -4,5 +4,21 @@ require 'rspec'
 require 'grep'
 
 describe Grep do
-  pending
+  describe ".grep" do
+    let(:pattern) { /456/ }
+    let(:str) { "1234567890"}
+    subject { Grep.grep(pattern, str) }
+
+    context "pattern: /456/, str: '1234567890'" do
+      it "should return 456" do
+        subject.should == "456"
+      end
+    end
+
+    context "pattern: /abc/, str: '1234567890'" do
+      it "should return nil" do
+        subject.should be_nil
+      end
+    end
+  end
 end

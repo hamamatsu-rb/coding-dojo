@@ -1,4 +1,4 @@
 class Grep
-  def grep(pattern, str)
+  def self.grep(pattern, str)
   end
 end
