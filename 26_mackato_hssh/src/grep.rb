@@ -1,9 +1,9 @@
 class Grep
   def self.grep(pattern, str)
-    if (ret = str.match(pattern).to_s) == ""
+    if ret = str.match(pattern)
+      $1 || ret.to_s
+    else 
       nil
-    else
-      ret
     end
   end
 end
