@@ -3,8 +3,14 @@ class Grep
     @re = Regexp.new(re)
   end
 
-  def match?( text )
-    @re =~ text
+  def grep( text )
+    if @re =~ text
+      if $1 
+        return $1
+      else
+        text
+      end
+    end
   end
 
 end
