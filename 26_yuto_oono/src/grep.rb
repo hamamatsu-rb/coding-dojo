@@ -1,6 +1,12 @@
 
 class Grep
-  def match?( re, text )
-    re =~ text
+
+  def initialize(re)
+    @re = Regexp.new(re)
   end
+
+  def match?( text )
+    @re =~ text
+  end
+
 end
