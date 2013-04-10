@@ -14,6 +14,8 @@ namespace :dojo do
       EOS
       sh "bundle install --path .bundle"
       sh "mkdir src"
+      sh "git branch #{dir}"
+      sh "git checkout #{dir}"
     end
 
     puts "\r\nCongratulations.\r\nGates of the dojo was opened."
@@ -27,6 +29,8 @@ namespace :dojo do
     fail "please specify 'dojo_name'" unless dir 
       
     sh "rm -rf #{dir}"
+    sh "git checkout master"
+    sh "git branch -d #{dir}"
     puts "You was 'Hamon'"
   end  
 
