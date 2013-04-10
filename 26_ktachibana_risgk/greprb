@@ -1,0 +1,20 @@
+#!env ruby
+
+class Greprb
+  def initialize(argv, output, input)
+    @argv, @output, @input = argv, output, input
+  end
+
+  def exec
+    regex = Regexp.compile(@argv)
+    @input.each do |line|
+      match = regex.match(line)
+
+      @output.puts match[0] if match
+    end
+  end
+end
+
+if __FILE__ == $PROGRAM_NAME
+  Greprb.new(ARGV[0], $stdout, $stdin).exec
+end
