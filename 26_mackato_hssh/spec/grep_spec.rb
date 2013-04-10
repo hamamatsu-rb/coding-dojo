@@ -21,5 +21,12 @@ describe Grep do
         subject.should be_nil
       end
     end
+
+    context "pattern: /3(456)7/, str: '1234567890'" do
+      let(:pattern) { /3(456)7/ }
+      it "should return 456" do
+        subject.should == "456"
+      end
+    end
   end
 end
