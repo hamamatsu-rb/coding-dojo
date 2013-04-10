@@ -2,14 +2,11 @@ require '../src/grep'
 
 describe Grep do
 
-  subject { Grep.new }
+  subject { Grep.new("text") }
 
-  before do
-    @regex = Regexp.new( 'text' )
-  end
+  it { should be_match("input text" ) }
+  it { should_not be_match( "input ttttt" ) }
 
-  it { should be_match( @regex, "input text" ) }
-  it { should_not be_match( @regex, "input ttttt" ) }
-
+  
 end
 
