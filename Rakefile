@@ -7,12 +7,21 @@ namespace :dojo do
 
     sh "mkdir #{dir}"
     Dir::chdir(dir) do
-      sh "rspec --init"
       sh "bundle init"
+      if RUBY_PLATFORM =~ /(mingw|mswin)/
+        sh <<-EOS
+	        echo gem 'rspec' >> Gemfile
+	      EOS
+	    else 
+	      sh <<-EOS
+	        echo gem "'rspec'" >> Gemfile
+	      EOS
+	    end
       sh <<-EOS
-        echo gem "'rspec'" >> Gemfile
+        echo .bundle > .gitignore
       EOS
       sh "bundle install --path .bundle"
+      sh "bundle exec rspec --init"
       sh "mkdir src"
       sh "git branch #{dir}"
       sh "git checkout #{dir}"
