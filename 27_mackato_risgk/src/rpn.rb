@@ -5,7 +5,11 @@ class RPN
     ary.each do |c|
       case c
       when "+"
-        stack << (stack.pop + stack.pop)
+        stack << stack.pop + stack.pop
+      when "-"
+        stack << -(stack.pop - stack.pop)
+      when "*"
+        stack << stack.pop * stack.pop
       else
         stack << c.to_i
       end    
