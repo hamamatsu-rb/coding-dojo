@@ -21,4 +21,12 @@ describe Greprb do
     grep.exec
     output.string.should == ""
   end
+
+  it '正規表現の中に()によるグループが1つあったら、そのグループのマッチ部分だけを出力' do
+    output = StringIO.new
+    input = StringIO.new("abc123 a")
+    grep = Greprb.new('abc(\d+)', output, input)
+    grep.exec
+    output.string.should == "123\n"
+  end
 end

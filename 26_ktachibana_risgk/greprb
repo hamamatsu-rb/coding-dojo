@@ -9,8 +9,14 @@ class Greprb
     regex = Regexp.compile(@argv)
     @input.each do |line|
       match = regex.match(line)
-
-      @output.puts match[0] if match
+      case
+      when match.nil?
+        # do nothing
+      when match[1]
+        @output.puts match[1]
+      when match
+        @output.puts match[0]
+      end
     end
   end
 end
