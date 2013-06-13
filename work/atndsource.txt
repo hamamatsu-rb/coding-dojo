@@ -1,0 +1,41 @@
+h1. イベント概要
+
+Hamamatsu.rbは、静岡県浜松市周辺の Ruby技術者 や Rubyに関心がある人 が集まって、お話や勉強をする地域コミュニティです。 毎月第2水曜日に開催しています。
+
+* プログラミング言語Rubyに興味がある人
+* Ruby on Railsでウェブアプリを作りたい人
+* Rubyは興味ないけど自分のコミュニティのアピールをしたい人
+* 何か良く判んないけどプログラマーの集まりに参加してニヤニヤしたい人
+
+こういった方々が集まって Ruby以外の話題も含めて楽しく 学んでいます。
+
+h1. アジェンダ
+
+* Coding Dojo (ペアプログラミングでCodeKata)
+* LT
+参加方法や過去ログ・当日の詳細は、 "Hamamatsu.rb":https://github.com/hamamatsu-rb/hamamatsu-rb.github.com/wikiのWiki で確認してください。
+
+グループトーク や コーディング道場、読書会など、時期によりテーマが異なります
+その他発表、LT（募集中です。希望される方は "Googleグループ":https://groups.google.com/forum/#!forum/hamamatsu-rb までお願いします。）
+
+h1. 参加費
+
+￥100
+
+h1. 日程
+
+2013年07月10日(水) 19:00-21:00
+
+h1. 会場
+
+静岡県浜松市中区鴨江町1番地　鴨江別館104号室
+
+h1. 参加方法
+
+このATNDより登録をお願いいたします。 よろしければ、オンライン上の Hamamatsu.rbコミュニティ にも参加をお願いします。
+
+ポジションペーパ: 参加の前に "ポジションペーパ":https://github.com/hamamatsu-rb/hamamatsu-rb.github.com/wiki/%E3%83%9D%E3%82%B8%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC を作って登録しましょう。また他の参加者のものに目を通しておくと参加しやすいですよ。
+GitHub: "hamamatsu-rb":https://github.com/hamamatsu-rb (アカウント教えてもらえればメンバー追加します)
+Twitter: "@hamamatsurb":https://twitter.com/hamamatsurb (「@hamamatsurb subscribe」とつぶやけば自動フォローします）
+Facebook: "Hamamatsu.rb":https://www.facebook.com/pages/Hamamatsurb/196508373706679 (イイね！してね！)
+Googleグループ : "Hamamatsu.rbグループ":https://groups.google.com/forum/?hl=ja&fromgroups=#!forum/hamamatsu-rb (参加して下さい)
