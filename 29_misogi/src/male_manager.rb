@@ -7,4 +7,8 @@ class MaleManager
 			@members[n] = Male.new(n)
 		end
 	end
+
+	def consider_female_rank(females)
+		
+	end
 end
