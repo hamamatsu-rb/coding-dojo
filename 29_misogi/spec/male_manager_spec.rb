@@ -6,7 +6,8 @@ require 'male_manager'
 describe MaleManager do
 	describe "new" do
 		it "can get members" do
-			subject = MaleManager.new
+			names = ["John", "George", "Smith"]
+			subject = MaleManager.new(names)
 			subject.should_not nil
 
 			subject.members.size.should == 3

@@ -6,7 +6,7 @@ require 'male'
 describe Male do
 	describe "new" do
 		it "enable new male" do
-			h = Male.new
+			h = Male.new "John"
 			h.should_not nil
 		end
 	end
