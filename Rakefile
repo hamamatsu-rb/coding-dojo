@@ -27,8 +27,7 @@ namespace :dojo do
       sh "git checkout #{dir}"
     end
 
-    puts "\r\nCongratulations.\r\nGates of the dojo was opened."
-    puts "'cd #{dir}' , and Strive to 'Shugyo'."
+    puts "\r\nMay The Code be with you..."
   end
 
 
